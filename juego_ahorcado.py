@@ -92,7 +92,7 @@ def run():
         os.system("cls")
         print(f"""
         ** JUEGO DEL AHORCADO **
-Instrucciones: Introduce una y sólo una letra a la vez
+Instrucciones: Introduce UNA y sólo UNA letra a la vez
 para tratar de adivinar la palabra oculta
 
 -- Lleva {errors} {"error" if errors == 1 else "errores"} --
@@ -109,7 +109,7 @@ para tratar de adivinar la palabra oculta
                 user_input = replace_accent(user_input.upper())
 
                 if len(user_input) != 1:
-                    raise ValueError('Sólo se permite una letra a la vez')
+                    raise ValueError('Sólo se permite UNA letra')
                 elif user_input in word:
                     for index, value in enumerate(word):
                         if value == user_input:
@@ -120,7 +120,7 @@ para tratar de adivinar la palabra oculta
             except ValueError as e:
                 print(f'ERROR: {e}')
                 errors += 1
-                sleep(3)
+                sleep(2)
 
     # INTERFAZ DE SALIDA
     print(f"""  
